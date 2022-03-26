@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tabla listar -->
+        <div class="consultar mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Lista Cantantes</h1>
+                </div>
+                <div class="col-6">
+                    <a href="#" class="btn btn-primary">Nuevo Cantante</a>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="table table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>Genero_id</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyCantante">    
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Fin tabla listar  -->      
+        <hr>
+
+        <!-- Detalles -->
+        <div class="detalles">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-warning">Detalles</h2>
+                </div>
+                <div class="col-12">
+                    <div id="detallesCantante">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin detalles -->
+        <hr>
+
+        <!-- Inicio del formulario -->
+            <div class="formulario">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-primary">Formulario Cantante</h2>
+                    </div>
+                    <div class="col-12">
+                        <form id="formularioCantante">
+                            <label>Id:</label>
+                            <input id="myId" type="number">
+
+                            <label>Nombre:</label>
+                            <input id="nombre" type="text">
+
+                            <label>Apellido:</label>
+                            <input id="apellido" type="text"><br>
+
+                            <label>Edad:</label>
+                            <input id="edad" type="number">
+
+                            <label>Genero_id:</label>
+                            <input id="genero_id" type="text">
+
+                            <div id="btnFormulario">
+                                <input id="btnCrear" type="submit" onclick="crearCantante()" value="Crear" class="btn btn-primary"> 
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <!-- Fin del formulario -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/cantante.js"></script>   
+</body>
+
+</html>
